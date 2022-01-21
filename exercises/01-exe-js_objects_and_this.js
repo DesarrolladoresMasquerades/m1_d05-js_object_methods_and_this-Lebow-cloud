@@ -1,4 +1,4 @@
-// TODO: write the methods getAge, addFriend and getRandomFriend
+// TO DO: write the methods getAge, addFriend and getRandomFriend
 
 const chuck = {
     firstName: 'Chuck',
@@ -14,19 +14,19 @@ const chuck = {
         `My name is ${this.firstName} ${this.lastName} and I have ${this.friends.length} friends.`
       );
     },
-    getAge: function() {
-      // TODO: return the age in this function
-      // Hint: to get the current time, you can do: new Date()
-      // Hint: to get the birthDate, you can do: this.birthDate
-      // Hint: you can subtract 2 dates and you get the number of milliseconds
-      // Hint: convert the milliseconds to years 
-    },
+    getAge: function(age) {
+
+     return (Math.floor(((new Date() - this.birthDate))/1000/60/60/24/365))
+      
+      },
+
     addFriend: function(name) {
-      // TODO (don't use return statement)
-      // add a name to the friends array. The friend name is passed as a parameter to the function
+
+      this.friends.push(name)
+      
     },
     getRandomFriend: function() {
-      // TODO. return a random friend name from the friends array
+      // TO DO. return a random friend name from the friends array
     }
   };
   
@@ -42,3 +42,5 @@ const chuck = {
   console.log('getRandomFriend', chuck.getRandomFriend());
   
   chuck.displayInfo();
+
+  
